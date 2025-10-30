@@ -1,21 +1,24 @@
 def fatorial(n):
 
-    lis = []
+    if n != 0:
+        lis = []
 
-    for x in range(n):
-        lis.append(x+1)
+        for x in range(n):
+            lis.append(x+1)
 
-    cercas = len(lis)-1
+        cercas = len(lis)-1
 
-    for x in range(cercas):
+        for x in range(cercas):
 
-        g = lis[0] * lis[1]
-        lis.pop(0)
-        lis.pop(0)
-        lis.append(g)
-    return(lis[0])
+            g = lis[0] * lis[1]
+            lis.pop(0)
+            lis.pop(0)
+            lis.append(g)
+        return(lis[0])
+    else:
+        return(1)
 
 
 #---------------------------------------------------
-print(fatorial(4))
+print(fatorial(0))
 #made by https://github.com/ANT0NI0737BR/codigos.git    
